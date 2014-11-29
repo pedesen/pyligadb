@@ -7,8 +7,9 @@ OpenLigaDB is a german SOAP webservice providing sports results and scores, espe
 ###Example use:
 
 ```python
-from pyligadb.pyligadb import openligadb
-matches = openligadb().getMatchdataByGroupLeagueSaison(14, 'bl1', 2010)
+from pyligadb.pyligadb import API
+api = API()
+matches = api.getMatchdataByGroupLeagueSaison(14, 'bl1', 2010)
 for match in matches:
     print "%s vs. %s" % (match.nameTeam1, match.nameTeam2)
 ```
